@@ -1,13 +1,22 @@
+"""""""""""""""""""""""""""""""""""""""""""""""
+" Plug (plugin manager by junegunn)
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 " Begin loading plugins
 call plug#begin ('~/.vim/plugged')
+
 Plug 'scrooloose/nerdTree'
 Plug 'scrooloose/nerdcommenter'
+Plug 'jiangmiao/auto-pairs'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'Valloric/YouCompleteMe'
+
 " Add plugins to &runtimepath
 call plug#end()
 
-"""
+"""""""""""""""""""""""""""""""""""""""""""""""
 " Better editor configuration
-"""
+"""""""""""""""""""""""""""""""""""""""""""""""
 
 " Map "jk" to "escape" function
 :imap jk <Esc>
