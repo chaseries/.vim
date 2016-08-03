@@ -36,6 +36,58 @@ nnoremap <Leader>w :q<CR>
 " Map "Leader + bw" to close buffer
 nnoremap <Leader>bw :Bdelete<CR>
 
+" Get rid of annoying "~" file
+:set nobackup
+
+" Set relative line numbers
+:set rnu
+
+" Expand tab to spaces
+:set expandtab
+
+" Set the number of spaces that a tab counts for 
+:set tabstop=2
+
+" Set shiftwidth
+:set shiftwidth=2
+
+" Force tabstops for Python
+au FileType python setl expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" Force tabstop for Haskell
+au FileType haskell setl expandtab shiftwidth=2 tabstop=2 softtabstop=2
+
+" Fix backspacing so that it deletes a line
+set backspace=indent,eol,start
+
+" Create persistent undo history
+:set undofile
+:set undodir=$HOME/.vim/undo
+:set undolevels=1000
+:set undoreload=10000
+
+" Make regex search in-case sensitive
+:set ignorecase
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" SYNTAX & COLOR ELEMENTS
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+" Turn syntax highlighting on
+syntax on
+
+" Set terminal to 256 colors, if supported
+if $TERM == "xterm-256color"
+  set t_Co=256
+endif
+
+" Set color scheme
+color highfructose
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree settings
+"""""""""""""""""""""""""""""""""""""""""""""""
+
 " Add spaces around comment delimiters
 let NERDSpaceDelims=1 
 
@@ -47,4 +99,33 @@ let NERDTreeIgnore = ['\.pyc$']
  
 " Map :NERDTreeToggle to <Leader>n
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree settings
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:multi_cursor_quit_key='<Esc>'
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" Add cool GUI-like indicator for insert mode 
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+function! InsertStatuslineColor(mode)
+  if a:mode == 'i'
+    hi statusline guibg=green
+    hi statusline ctermbg=5f00ff
+  elseif a:mode == 'v'
+    hi statusline guibg=red
+    hi statusline ctermbg=red
+  else
+    hi statusline guibg=black
+    hi statusline ctermbg=000000
+  endif
+endfunction
+
+au InsertEnter  * call InsertStatuslineColor(v:insertmode)
+au InsertChange * call InsertStatuslineColor(v:insertmode)
+au InsertLeave  * hi   statusline guibg=black 
+au InsertLeave  * hi   statusline ctermbg=000000 
+
 
