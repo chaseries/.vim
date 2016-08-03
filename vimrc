@@ -10,6 +10,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
+Plug 'neovimhaskell/haskell-vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -32,6 +33,9 @@ nnoremap <Leader>s :w<CR>
 
 " Map Leader +w to quit
 nnoremap <Leader>w :q<CR>
+
+" Map Leader +ww to force quit
+nnoremap <Leader>ww :q!<CR>
 
 " Map "Leader + bw" to close buffer
 nnoremap <Leader>bw :Bdelete<CR>
@@ -68,6 +72,7 @@ set backspace=indent,eol,start
 
 " Set case-insensitive regex search, but trump case-insensitivity 
 " if uppercase is used
+:set ignorecase
 :set smartcase
 
 """""""""""""""""""""""""""""""""""""""""""""""
