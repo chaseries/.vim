@@ -66,8 +66,9 @@ set backspace=indent,eol,start
 :set undolevels=1000
 :set undoreload=10000
 
-" Make regex search in-case sensitive
-:set ignorecase
+" Set case-insensitive regex search, but trump case-insensitivity 
+" if uppercase is used
+:set smartcase
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " SYNTAX & COLOR ELEMENTS
@@ -127,5 +128,3 @@ au InsertEnter  * call InsertStatuslineColor(v:insertmode)
 au InsertChange * call InsertStatuslineColor(v:insertmode)
 au InsertLeave  * hi   statusline guibg=black 
 au InsertLeave  * hi   statusline ctermbg=000000 
-
-
