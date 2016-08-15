@@ -11,6 +11,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'ElmCast/elm-vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -37,14 +38,23 @@ nnoremap <Leader>w :q<CR>
 " Map Leader +ww to force quit
 nnoremap <Leader>ww :q!<CR>
 
+"  Map "Leader + b" to go to next buffer
+nnoremap <Leader>b :bn<CR>
+
 " Map "Leader + bw" to close buffer
-nnoremap <Leader>bw :Bdelete<CR>
+nnoremap <Leader>bw :bd<CR>
 
 " Get rid of annoying "~" file
 :set nobackup
 
-" Set relative line numbers
+" Set relative line numbers...
 :set rnu
+
+" ...But also display the current line number
+:set number
+"
+" Show the status bar always
+:set laststatus=2
 
 " Expand tab to spaces
 :set expandtab
@@ -74,6 +84,12 @@ set backspace=indent,eol,start
 " if uppercase is used
 :set ignorecase
 :set smartcase
+
+" Try and set smart indentation based on filetype
+" I'm not totally sure how this works, and I don't have the ambition to figure
+" it out right now.
+:filetype plugin on
+:filetype indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " SYNTAX & COLOR ELEMENTS
@@ -107,7 +123,13 @@ let NERDTreeIgnore = ['\.pyc$']
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree settings
+" elm-vim settings
+"""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:elm_setup_keybindings = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""
+" vim-multiple-cursors settings 
 """""""""""""""""""""""""""""""""""""""""""""""
 
 let g:multi_cursor_quit_key='<Esc>'
