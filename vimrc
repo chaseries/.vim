@@ -1,6 +1,6 @@
-"""""""""""""""""""""""""""""""""""""""""""""""
-" Plug (plugin manager by junegunn)
-"""""""""""""""""""""""""""""""""""""""""""""""
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
+" PLUG (PLUGIN MANAGER BY junegunn) PLUG (PLUGIN MANAGER BY junegunn) PLUG (PL "
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
 
 " Begin loading plugins
 call plug#begin ('~/.vim/plugged')
@@ -16,9 +16,10 @@ Plug 'ElmCast/elm-vim'
 " Add plugins to &runtimepath
 call plug#end()
 
-"""""""""""""""""""""""""""""""""""""""""""""""
-" Better editor configuration
-"""""""""""""""""""""""""""""""""""""""""""""""
+
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
+" STOCK IMPROVEMENTS  STOCK IMPROVEMENTS  STOCK IMPROVEMENTS  STOCK IMPROVEMEN "
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
 
 " Map "jk" to "escape" function
 :imap jk <Esc>
@@ -43,6 +44,9 @@ nnoremap <Leader>b :bn<CR>
 
 " Map "Leader + bw" to close buffer
 nnoremap <Leader>bw :bd<CR>
+
+" Set bottom right-hand line and column number view
+:set ruler
 
 " Get rid of annoying "~" file
 :set nobackup
@@ -91,9 +95,10 @@ set backspace=indent,eol,start
 :filetype plugin on
 :filetype indent on
 
-"""""""""""""""""""""""""""""""""""""""""""""""
-" SYNTAX & COLOR ELEMENTS
-"""""""""""""""""""""""""""""""""""""""""""""""
+
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
+" SYNTAX & COLOR SYNTAX & COLOR SYNTAX & COLOR SYNTAX & COLOR SYNTAX & COLOR S "
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
 
 " Turn syntax highlighting on
 syntax on
@@ -106,9 +111,10 @@ endif
 " Set color scheme
 color highfructose
 
-"""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree settings
-"""""""""""""""""""""""""""""""""""""""""""""""
+
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
+" NERDTREE SETTINGS NERDTREE SETTINGS NERDTREE SETTINGS NERDTREE SETTINGS NERD "
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
 
 " Add spaces around comment delimiters
 let NERDSpaceDelims=1 
@@ -122,21 +128,23 @@ let NERDTreeIgnore = ['\.pyc$']
 " Map :NERDTreeToggle to <Leader>n
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""
-" elm-vim settings
-"""""""""""""""""""""""""""""""""""""""""""""""
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
+" ELM-VIM SETTINGS  ELM-VIM SETTINGS  ELM-VIM SETTINGS  ELM-VIM SETTINGS  ELM- "
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
 
 let g:elm_setup_keybindings = 0
 
-"""""""""""""""""""""""""""""""""""""""""""""""
-" vim-multiple-cursors settings 
-"""""""""""""""""""""""""""""""""""""""""""""""
+
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
+" VIM-MULTIPLE-CURSOR SETTINGS VIM-MULTIPLE-CURSOR SETTINGS VIM-MULTIPLE-CURSO "
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
 
 let g:multi_cursor_quit_key='<Esc>'
 
-"""""""""""""""""""""""""""""""""""""""""""""""
-" Add cool GUI-like indicator for insert mode 
-"""""""""""""""""""""""""""""""""""""""""""""""
+
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
+" COOL GUI-LIKE STATUS LINE COOL GUI-LIKE STATUS LINE COOL GUI-LIKE STATUS LIN "
+"$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
 
 function! InsertStatuslineColor(mode)
   if a:mode == 'i'
