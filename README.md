@@ -16,7 +16,7 @@ To check it out, do this:
 
 ```
 cd
-git clone https://julienchurch.com/.vim && .vim/bootstrap
+git clone https://julienchurch.com/.vim && .vim/bootstrap.sh
 ```
 
 Tested on OSX version 10.11.4 and Ubuntu 14.04.
