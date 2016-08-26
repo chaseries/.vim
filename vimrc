@@ -24,6 +24,17 @@ call plug#end()
 " Map "jk" to "escape" function
 :imap jk <Esc>
 
+" Remap  these keys because it's just too much of a pain to stretch my fingers
+:nnoremap LL $
+:nnoremap HH 0
+:nnoremap KK gg
+:nnoremap JJ G
+
+" And remap these so I can do Emacs-style line jumping in insert mode
+:inoremap <C-e> <C-o>$
+:inoremap <C-a> <C-o>0
+
+
 " Set length before timout (e.g., when executing "jk")
 :set timeoutlen=250
 
