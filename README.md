@@ -1,4 +1,4 @@
-My dotfiles
+My vim dotfiles.
 
 Uses junegunn's plug-in manager [Plug](https://github.com/junegunn/vim-plug) and includes the following plugins:
 
