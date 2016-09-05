@@ -12,6 +12,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'Valloric/YouCompleteMe'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'ElmCast/elm-vim'
+Plug 'pbrisbin/vim-syntax-shakespeare'
 
 " Add plugins to &runtimepath
 call plug#end()
