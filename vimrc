@@ -13,6 +13,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'ElmCast/elm-vim'
 Plug 'pbrisbin/vim-syntax-shakespeare'
+Plug 'cakebaker/scss-syntax.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
