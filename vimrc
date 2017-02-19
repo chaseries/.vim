@@ -9,10 +9,7 @@ Plug 'scrooloose/nerdTree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'Valloric/YouCompleteMe'
-Plug 'neovimhaskell/haskell-vim'
 Plug 'ElmCast/elm-vim'
-Plug 'pbrisbin/vim-syntax-shakespeare'
 Plug 'cakebaker/scss-syntax.vim'
 
 " Add plugins to &runtimepath

@@ -2,3 +2,4 @@ undo/
 autoload
 .netrwhist
 plugged/
+*.swp
