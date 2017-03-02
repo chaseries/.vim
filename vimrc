@@ -27,10 +27,10 @@ call plug#end()
 :imap jk <Esc>
 
 " Remap  these keys because it's just too much of a pain to stretch my fingers
-:nnoremap LL $
-:nnoremap HH 0
-:nnoremap KK gg
-:nnoremap JJ G
+:nnoremap L $
+:nnoremap H 0
+:nnoremap K gg
+:nnoremap J G
 
 " And remap these so I can do Emacs-style line jumping in insert mode
 :inoremap <C-e> <C-o>$
