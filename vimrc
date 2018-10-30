@@ -5,19 +5,25 @@
 " Begin loading plugins
 call plug#begin ('~/.vim/plugged')
 
+Plug 'posva/vim-vue'
+Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdTree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'neovimhaskell/haskell-vim'
+Plug 'raichoo/haskell-vim'
 Plug 'ElmCast/elm-vim'
 Plug 'pbrisbin/vim-syntax-shakespeare'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'purescript-contrib/purescript-vim'
+Plug 'leafgarland/typescript-vim'
 
 " Add plugins to &runtimepath
 call plug#end()
 
 
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+ 
 "$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
 " STOCK IMPROVEMENTS  STOCK IMPROVEMENTS  STOCK IMPROVEMENTS  STOCK IMPROVEMEN "
 "$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
@@ -34,6 +40,10 @@ call plug#end()
 " And remap these so I can do Emacs-style line jumping in insert mode
 :inoremap <C-e> <C-o>$
 :inoremap <C-a> <C-o>0
+
+" Set commands to yank/paste to and from clipboard (vim-gkt only)
+vmap <Leader>y "+y
+vmap <Leader>p "+p
 
 
 " Set length before timout (e.g., when executing "jk")
@@ -112,6 +122,8 @@ set backspace=indent,eol,start
 " SYNTAX & COLOR SYNTAX & COLOR SYNTAX & COLOR SYNTAX & COLOR SYNTAX & COLOR S "
 "$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
 
+nnoremap <Leader>r :syn sync fromstart<CR>
+
 " Turn syntax highlighting on
 syntax on
 
@@ -122,6 +134,8 @@ endif
 
 " Set color scheme
 color highfructose
+
+" Create a command that lets syntax highlighting resync
 
 
 "$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
@@ -135,7 +149,7 @@ let NERDSpaceDelims=1
 let NERDTreeShowHidden=1
 
 " Ignore the following files in NERDTree 
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '\.swp$']
  
 " Map :NERDTreeToggle to <Leader>n
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
@@ -175,3 +189,20 @@ au InsertEnter  * call InsertStatuslineColor(v:insertmode)
 au InsertChange * call InsertStatuslineColor(v:insertmode)
 au InsertLeave  * hi   statusline guibg=black 
 au InsertLeave  * hi   statusline ctermbg=000000 
+
+
+" Syntastic stuff
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let syntastic_mode_map = { 'passive_filetypes': ['html']  }
+
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_vue_checkers = ['eslint']
+
+
