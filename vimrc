@@ -17,6 +17,7 @@ Plug 'pbrisbin/vim-syntax-shakespeare'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'purescript-contrib/purescript-vim'
 Plug 'leafgarland/typescript-vim'
+Plug 'idris-hackers/idris-vim'
 
 " Add plugins to &runtimepath
 call plug#end()
