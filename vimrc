@@ -24,6 +24,8 @@ call plug#end()
 
 
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
  
 "$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$#$
 " STOCK IMPROVEMENTS  STOCK IMPROVEMENTS  STOCK IMPROVEMENTS  STOCK IMPROVEMEN "
@@ -37,6 +39,8 @@ autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 :nnoremap H 0
 :nnoremap K gg
 :nnoremap J G
+:nnoremap <C-j> <C-D>
+:nnoremap <C-k> <C-B>
 
 " And remap these so I can do Emacs-style line jumping in insert mode
 :inoremap <C-e> <C-o>$
